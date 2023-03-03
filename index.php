@@ -15,15 +15,15 @@
     include "header.php";
     ?>
     <div class="banniere">
-        
-        <h1>ACCUEIL</h1>
+
+        <h1>Accueil</h1>
 
     </div>
 <main>
     <div class="bouton_redirection">
         <a href="listing.php">
         <button class="bouton_clips">Cliquez pour découvrir la listes des clips d'Eve</button>
-    </a>
+    </a>    
         <a href="form_recherche.php">
         <button class="bouton_formulaire">Cliquez pour effectuer une recherche dans la discographie</button>
     </a>

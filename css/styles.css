@@ -121,6 +121,15 @@ button:hover{
     align-items: center;
 }
 
+.gif {
+    text-align: center;
+}
+
+.gif_infos{
+    margin-top: 20px;
+    width: 350px;
+}
+
 .gif img{
     width: 350px;
     height: 200px;

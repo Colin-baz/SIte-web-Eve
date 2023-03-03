@@ -22,7 +22,7 @@
 
 <main>
 
-    <form method="post" action="traitement.php">
+    <form method="post" action="reponse_recherche.php">
 
     <div class="form_recherche">
         <label for="titre">Titre du clip : </label>
