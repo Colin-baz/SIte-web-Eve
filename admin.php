@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="icon" href="images/header_logo.png">
-    <title>Rechercher</title>
+    <title>ADMINISTRATION</title>
     
 </head>
 <body>
@@ -14,25 +14,21 @@
     //Appel du bloc Header et du Menu>
     include "header.php";
     ?>
-<div class="banniere">
+    <div class="banniere">
 
-<h1>Rechercher</h1>
+        <h1>Administration</h1>
 
-</div>
-
+    </div>
 <main>
-
-    <form method="post" action="reponse_recherche.php">
-
-    <div class="form_recherche">
-        <label for="titre">Titre du clip : </label>
-            <input type="text" name="titre" id="titre"><br/>
+    <div class="bouton_redirection">
+        <a href="table1_gestion.php">
+        <button class="bouton_clips">Gestion des clips</button>
+    </a>    
+        <a href="table2_gestion.php">
+        <button class="bouton_formulaire">Gestion des directeurs/producteurs des clips</button>
+    </a>
     </div>
 
-    <div class="form_bouton">
-            <input type="submit" value="Chercher les clips correspondants">
-    </div>
-    <form>
 </main>
 
 <?php

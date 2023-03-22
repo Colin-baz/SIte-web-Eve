@@ -1,10 +1,7 @@
 <?php
-    if ( (empty($_POST['titre'])) ) {
-        header('Location: form_recherche.php');
-    }
-    $titre = $_POST['titre'];
-     $titre =  filter_var( $titre ,  FILTER_SANITIZE_STRING );
+    $clip=$_POST['titre'];
 ?>
+
  <html>
  <head>
     <meta charset="UTF-8">
@@ -24,34 +21,31 @@
 
   <h1> Résultats de la recherche </h1>
   <main>
-    <div class="reponse">
+
+<?php
+    echo '<h2>Voici les résultats de la recherche pour " '.$clip.' "</h2>';
+?>
+
+    <div class="discographie">
     <?php
-        echo '<p>Voici les résultats trouvés pour <b>'.$titre.'</b> : </p>'."\n";   
-    ?>
-    </div>
-        <div class="discographie">
-        
-        <div class="gif">
-     <img src="images/anime-eve.jpg" onmouseover="this.src='images/anime-eve.gif';"  onmouseout="this.src='images/anime-eve.jpg';" />
-     <div class="gif_infos">
-        <h3>Comment dévorer la vie - Eve MV</h3>
-            <p>Clip produit par Mariyasu, avec plus de 76 Millions de vues sur YouTube</p>
-    </div>
-        </div>
-    <div class="gif">
-    <img src="images/dramaturgy.jpg" onmouseover="this.src='images/dramaturgy.gif';"  onmouseout="this.src='images/dramaturgy.jpg';" />
-    <div class="gif_infos">
-        <h3>Dramaturgy - Eve MV</h3>
-            <p>Clip produit par Mah, avec près de 150 Millions de vues sur YouTube</p>
-    </div>
-        </div>
-    <div class="gif">
-    <img src="images/遊生夢死.jpg" onmouseover="this.src='images/遊生夢死.gif';"  onmouseout="this.src='images/遊生夢死.jpg';" />
-    <div class="gif_infos">
-        <h3>Yuseiboushi - Eve MV</h3>
-            <p>Clip produit par niL, avec plus de 20 Millions de vues sur YouTube</p>
-    </div>
-    </div>
+    
+$clip = $_POST['titre'];
+$madisco = new PDO('mysql:host=localhost;dbname=sae203Base;charset=UTF8;', 'sae203User', 'Colinba1373');
+$madisco->query('SET NAMES utf8;');
+$req = "SELECT * FROM clip INNER JOIN product ON clip._product_id = product.product_id WHERE clip_titre LIKE '%" . $clip . "%'" ;
+$resultat = $madisco->query($req);
+foreach ($resultat as $value) {
+    echo '<div class="clips">' ;
+    echo '<img src="images/uploads/'.$value['clip_photo'].'"/>';
+    echo '<h3>'.$value['clip_titre'] . '</h3>';
+    echo '<p>Année de sortie: ' . $value['clip_annee'] . '</p>';
+    echo '<p>Nombres de vues: ' . $value['clip_nbr_vues'] . ' vues </p>';
+    echo '<p>Album: ' . $value['clip_album'] . ' </p>';
+    echo '<p>Type de clip: ' . $value['clip_type'] . ' </p>';
+    echo '<p>Nom et prénom du producteur du clip: ' . $value['product_nom'] . ' ' . $value['product_prenom'] . ' </p>';
+    echo '</div>';
+}
+?>
     
     
   </main>

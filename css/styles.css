@@ -114,29 +114,18 @@ button:hover{
 }
 
 .discographie{
+    flex-wrap: wrap;
+}
+
+.clips{
     display:flex;
-    justify-content: center;
-    flex-wrap:wrap;
-    margin: 50px 0;
+    flex-direction: column;
     align-items: center;
+    width: 33,3%;
 }
 
-.gif {
-    text-align: center;
-}
-
-.gif_infos{
-    margin-top: 20px;
-    width: 350px;
-}
-
-.gif img{
-    width: 350px;
-    height: 200px;
-    transition: transform 0.5s ease;
-}
-.gif:hover {
-    transform: scale(1.2);
+.clips img {
+    height: 250px;
 }
 
 .form_recherche{
@@ -287,19 +276,30 @@ button:hover{
 }
 
 .discographie{
-    display:flex;
+    display:grid;
+    grid-template-columns: 400px 400px 400px;
+    grid-template-rows: 450px ;
     justify-content: space-around;
-    margin: 50px 0;
-    align-items: center;
 }
 
-.gif img{
-    width: 350px;
-    height: 200px;
-    transition: transform 0,5s ease;
+.clips{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
 }
-.gif img:hover {
+
+.clips img {
+    height: 250px;
+}
+
+.clips img:hover{
     transform: scale(1.1);
+    transition: transform 0.5s ease;
+}
+
+.clips h3{
+    margin: 20px 0;
 }
 
 .form_recherche{
@@ -337,13 +337,10 @@ button:hover{
     border-color: white;
 }
 
-.reponse{
+main h2{
     display:flex;
     justify-content: center;
-}
-
-.reponse p{
-    font-size: 20px;
+    margin: 50px 0;
 }
 
 form{
