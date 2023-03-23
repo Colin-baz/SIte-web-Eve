@@ -5,10 +5,10 @@
 </head>
 <body>
 <a href="table1_gestion.php">retour au tableau de bord</a> 	
-	<hr>
+	
 <h1>gestion de nos albums</h1>
 <p>vous venez de modifier un album</p>
-<hr>
+
 <?php
 $titre=$_POST['titre'];
 $annee=$_POST['annee'];

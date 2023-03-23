@@ -27,8 +27,8 @@ foreach ($resultat as $value) {
     echo '<td>'.$value['product_nom'] . '</td>';
     echo '<td>' . $value['product_prenom'] . '</td>';
     echo '<td>' . $value['product_genre'] . '</td>';
-    echo '<td> <a href="album_delete.php?num='.$value['product_id'].'"> supprimer </a> </td>';
-    echo '<td> <a href="modifier.php?num='.$value['product_id'].'" > modifier </a> </td>';
+    echo '<td> <a href="table2_delete.php?num='.$value['product_id'].'"> supprimer </a> </td>';
+    echo '<td> <a href="table2_update_form.php?num='.$value['product_id'].'" > modifier </a> </td>';
     echo '</tr>';
 }
 ?>
