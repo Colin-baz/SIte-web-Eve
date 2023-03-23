@@ -34,9 +34,9 @@ foreach ($resultat as $value) {
     echo '<td>' . $value['clip_nbr_vues'] . '</td>';
     echo '<td>' . $value['clip_album'] . '</td>';
     echo '<td>' . $value['clip_type'] . '</td>';
-    echo '<td> <img src="images/uploads/'.$value['clip_photo'].'"></td>';
-    echo '<td> <a href="album_delete.php?num='.$value['clip_id'].'"> supprimer </a> </td>';
-    echo '<td> <a href="modifier.php?num='.$value['clip_id'].'" > modifier </a> </td>';
+    echo '<td> <img src="../images/uploads/'.$value['clip_photo'].'"></td>';
+    echo '<td> <a href="table1_delete.php?num='.$value['clip_id'].'"> supprimer </a> </td>';
+    echo '<td> <a href="table1_update_form.php?num='.$value['clip_id'].'" > modifier </a> </td>';
     echo '</tr>';
 }
 ?>

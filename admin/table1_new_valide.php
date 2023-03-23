@@ -46,8 +46,8 @@ if(is_uploaded_file($_FILES["photo"]["tmp_name"])) {
 	echo '<p>Problème : image non chargée...</p>'."\n";
 	die();
 }
-$req = 'INSERT INTO clip(clip_titre,clip_annee,clip_nbr_vues,clip_album,clip_type,_product_id,clip_photo) VALUES("'.$titre.'",'.$annee.', '.$nbrvues.','.$album.','.$type.','.$numproduct.',"'.$nouvelleImage.'" )';
-echo $req;
+$req = 'INSERT INTO clip(clip_titre,clip_annee,clip_nbr_vues,clip_album,clip_type,_product_id,clip_photo) VALUES("'.$titre.'","'.$annee.'", "'.$nbrvues.'","'.$album.'","'.$type.'",'.$numproduct.',"'.$nouvelleImage.'" )';
+echo 'Le clip a été ajouté avec succès';
 $resultat = $madisco->query($req);
 
 ?>

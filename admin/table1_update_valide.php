@@ -4,18 +4,18 @@
 	<title></title>
 </head>
 <body>
-<a href="gestion.php">retour au tableau de bord</a> 	
+<a href="table1_gestion.php">retour au tableau de bord</a> 	
 	<hr>
 <h1>gestion de nos albums</h1>
 <p>vous venez de modifier un album</p>
 <hr>
 <?php
-$titre=$_POST['clip_titre'];
-$annee=$_POST['clip_annee'];
-$nbrvues=$_POST['clip_nbr_vues'];
-$album=$_POST['clip_album'];
-$type=$_POST['clip_type'];
-$numproduct=$_POST['numproduct'];
+$titre=$_POST['titre'];
+$annee=$_POST['annee'];
+$nbrvues=$_POST['nbvues'];
+$album=$_POST['album'];
+$type=$_POST['type'];
+$numproduct=$_POST['numproducteur'];
 $num=$_POST['num'];
 
 
@@ -51,7 +51,13 @@ if($imageName!=""){
 	            echo '<p>Problème : image non chargée...</p>'."\n";
 	            die();
 			}
-$req = 'UPDATE clip SET clip_titre="'.$titre.'", clip_annee='.$annee.', clip_nbr_vues='.$nbrvues.', clip_album='.$album.', clip_type='.$type.' _product_id='.$numproduct.' clip_photo="'.$nouvelleImage.'" WHERE bd_id='.$num;
+
+			$req = 'UPDATE clip SET clip_titre="'.$titre.'", clip_annee="'.$annee.'", clip_nbr_vues="'.$nbrvues.'", clip_album="'.$album.'", clip_type="'.$type.'", _product_id='.$numproduct.', clip_photo="'.$nouvelleImage.'" WHERE clip_id='.$num;
+		}
+else{
+   $req = 'UPDATE clip SET clip_titre="'. $titre . '", clip_annee="' .$annee.'", clip_nbr_vues="'.$nbrvues.'", clip_album="'.$album.'", clip_type="'.$type.'",_product_id='.$numproduct.' WHERE clip_id='.$num ;
+	}
+
  echo 'juste pour le debug: '. $req;
 $resultat = $madisco->query($req);
 
