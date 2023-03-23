@@ -25,7 +25,7 @@
         <button class="bouton_clips">Gestion des clips</button>
     </a>    
         <a href="table2_gestion.php">
-        <button class="bouton_formulaire">Gestion des directeurs/producteurs des clips</button>
+        <button class="bouton_formulaire">Gestion des producteurs des clips</button>
     </a>
     </div>
 
