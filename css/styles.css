@@ -37,9 +37,6 @@ nav{
 
 ul{
     list-style: none;
-}
-
-nav ul{
     display:none;
     position: absolute;
     background: #2c2c2c;
@@ -52,20 +49,19 @@ nav:hover ul,img{
     display: block;
 }
 
-nav li {
+li {
     display: inline-block;
-    text-align: end;
-    width: 100%;
     padding: 10px 0;
     margin: 0;
 }
 
-nav ul li a {
+ul li a {
     color: white;
     text-decoration: none;
     font-size: 20px;
     margin-right: 40px;
 }
+
 
 #icon_menu{
     visibility:visible;
@@ -124,11 +120,11 @@ button:hover{
     display:flex;
     flex-direction: column;
     align-items: center;
-    width: 33,3%;
+    margin-bottom: 50px;
 }
 
 .clips img {
-    height: 250px;
+    height: 200px;
 }
 
 .clips img:hover{
@@ -240,6 +236,40 @@ nav a {
     font-size: 20px;
     margin-right: 20px;
 }
+
+.navbar li:after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    display: block;
+    transition: all 0.3s ease;
+    bottom: 25%;
+  }
+
+.li1:hover::after {
+    width: 10%;
+    height: 1px;
+    background-color: #fff;
+  }
+
+.li2:hover::after {
+    width: 17%;
+    height: 1px;
+    background-color: #fff;
+}
+
+.li3:hover::after {
+    width: 15%;
+    height: 1px;
+    background-color: #fff;
+  }
+
+.li4:hover::after {
+    width: 20%;
+    height: 1px;
+    background-color: #fff;
+  }
 
 #icon_menu{
     visibility:hidden;
