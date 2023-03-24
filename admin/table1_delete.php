@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
-<head><title></title></head>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title></title>
+</head>
 <body>
 <a href="table1_gestion.php">retour au tableau de bord</a> 	
 <hr> <h1>gestion de nos albums</h1> <hr>

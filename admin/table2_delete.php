@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
-<head><title>Supprimer</title></head>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Supprimer</title>
+</head>
 <body>
 <a href="table2_gestion.php">retour au tableau de bord</a> 	
 <hr> <h1>gestion des producteurs</h1> <hr>

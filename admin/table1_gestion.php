@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 	<title>Gestion des clips</title>
     <style>
         img{
@@ -10,12 +11,13 @@
     </style>
 </head>
 <body>
-<a href="../index.php">retour au site</a> 	
-	<hr>
-<h1>gestion de nos albums</h1>
-<p>pensez a proteger le dossier admin avec un htaccess :-)</p>
-<hr>
-<a href="table1_new_form.php">ajouter un album</a>
+<a id="logo" href="../index.php"><img src="../images/header2_logo.jpg" alt="logo"></a>
+<a href="../index.php">Retour au site</a> 	
+
+<h1>Gestion de nos albums</h1>
+<p>Bienvenue dans la partie gestion des clips, c'est ici que la magie opère...</p>
+
+<a href="table1_new_form.php">Ajouter un album</a>
 <table border=1>
 	<thead>
 		<tr><td>titre</td><td>année</td><td>Nombre de vues</td><td>album</td><td>type de clip</td><td>Image</td><td>supprimer</td><td>modifier</td></tr>

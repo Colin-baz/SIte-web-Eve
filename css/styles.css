@@ -17,6 +17,9 @@ header{
     left: 0;
     height: 100px;
     width: 100%;
+    position: sticky;
+    background-color: black;
+    z-index:1;
 }
 
 #logo img{
@@ -128,6 +131,16 @@ button:hover{
     height: 250px;
 }
 
+.clips img:hover{
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
+    z-index:0;
+}
+
+.clips h3{
+    margin: 20px 0;
+}
+
 .form_recherche{
     margin-top: 50px;
     display:flex;
@@ -196,6 +209,8 @@ header{
     margin: 0;
     padding-bottom:20px;
     align-items: center;
+    background-color: black;
+    position:sticky;
 }
 
 nav{
@@ -296,6 +311,7 @@ button:hover{
 .clips img:hover{
     transform: scale(1.1);
     transition: transform 0.5s ease;
+    z-index:0;
 }
 
 .clips h3{

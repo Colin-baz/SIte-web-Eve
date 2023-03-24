@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 	<title>Gestion des producteurs</title>
-    <style>
-    </style>
 </head>
 <body>
 <a href="../index.php">retour au site</a> 	
-	<hr>
+	
 <h1>gestion de nos albums</h1>
-<hr>
+
 <a href="table2_new_form.php">ajouter un producteur</a>
 <table border=1>
 	<thead>
